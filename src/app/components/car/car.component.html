@@ -1,0 +1,243 @@
+<main class="site__main">
+  <div class="site__breadcrumb">
+    <div class="site__container">
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li>Araç Filomuz</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page__header">
+    <div class="site__container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="page__header-title">KİRALIK ARAÇ FİLOSU</h1>
+          <p>
+            Nereye giderseniz gidin, SUV, elektirikli, sedan veya ticari,
+            istediğiniz her araca sahipsiniz.
+          </p>
+        </div>
+        <div class="col-md-4 d-flex justify-content-end align-items-start">
+          <button
+            mat-flat-button
+            style="font-size: large; padding: 10px"
+            color="primary"
+          >
+            REZERVASYON YAPIN
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__content mb-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="site__container">
+          
+          <mat-tab-group>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <span style="padding: 15px 25px 15px 25px" (click)="getCars()"
+                  >Tümü</span
+                >
+              </ng-template>
+              <div class="row">
+                <div
+                  *ngFor="let car of this.carService.cars"
+                  class="col-md-6 col-lg-4 vehicles about_counter_wrap"
+                >
+                  <div class="fleet_list-item">
+                    <div class="fleet_list-item-title">
+                      <div class="title">
+                        {{ car.brandName }} {{ car.modelName }}
+                        {{ car.fuelType }}
+                        {{ car.gear }}
+                      </div>
+                      <div class="sub-title">{{ car.categoryName }}</div>
+                    </div>
+                    <div class="image">
+                      <img
+                        src="{{ getCarImageById(car.carId) }}"
+                        alt="{{ getCarImageById(car.carId) }}"
+                      />
+                    </div>
+                    <div class="properties">
+                      <div class="properties-item">
+                        <span class="properties-item-title">Kişi</span>
+                        <span class="properties-item-icon">
+                          <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                          <em>{{ car.seat }}</em>
+                        </span>
+                      </div>
+                      <div class="properties-item">
+                        <span class="properties-item-title">Çanta</span>
+                        <span class="properties-item-icon">
+                          <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon>
+                          <em>{{ car.bag }}</em>
+                        </span>
+                      </div>
+                      <div class="properties-item">
+                        <span class="properties-item-title">Vites</span>
+                        <span class="properties-item-icon">
+                          <fa-icon [icon]="['fas', 'sliders-h']"></fa-icon>
+                          <em>{{ car.gear }}</em>
+                        </span>
+                      </div>
+                    </div>
+                    <button mat-flat-button style="width: 100%" color="primary">
+                      DETAYLARI GÖSTER
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+
+            <mat-tab *ngFor="let category of this.categoryService.categories">
+              <ng-template mat-tab-label class="mat-tab-label">
+                <span
+                  style="padding: 15px 25px 15px 25px"
+                  (click)="getCarByCategory(category.id)"
+                  >{{ category.name }}</span
+                >
+              </ng-template>
+
+              <div class="row">
+                <div
+                  *ngFor="let car of this.carService.filteredCars"
+                  class="col-md-6 col-lg-4 vehicles about_counter_wrap"
+                >
+                  <div class="fleet_list-item">
+                    <div class="fleet_list-item-title">
+                      <div class="title">
+                        {{ car.brandName }} {{ car.modelName }}
+                        {{ car.fuelType }}
+                        {{ car.gear }}
+                      </div>
+                      <div class="sub-title">{{ car.categoryName }}</div>
+                    </div>
+                    <div class="image">
+                      <img
+                        src="{{ getCarImageById(car.carId) }}"
+                        alt="{{ getCarImageById(car.carId) }}"
+                      />
+                    </div>
+                    <div class="properties">
+                      <div class="properties-item">
+                        <span class="properties-item-title">Kişi</span>
+                        <span class="properties-item-icon">
+                          <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                          <em>{{ car.seat }}</em>
+                        </span>
+                      </div>
+                      <div class="properties-item">
+                        <span class="properties-item-title">Çanta</span>
+                        <span class="properties-item-icon">
+                          <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon>
+                          <em>{{ car.bag }}</em>
+                        </span>
+                      </div>
+                      <div class="properties-item">
+                        <span class="properties-item-title">Vites</span>
+                        <span class="properties-item-icon">
+                          <fa-icon [icon]="['fas', 'sliders-h']"></fa-icon>
+                          <em>{{ car.gear }}</em>
+                        </span>
+                      </div>
+                    </div>
+                    <button mat-flat-button style="width: 100%" color="primary">
+                      DETAYLARI GÖSTER
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+          <!--
+          <div class="col-12" *ngIf="!this.carService.cars">
+            <span>Araçlar yükleniyor...</span>
+          </div>
+          <div class="col-12" *ngIf="this.carService.cars?.length === 0">
+            <span
+              >Henüz araç eklemediniz.
+              <a class="text-primary">Buraya tıklayarak</a>
+              ilk aracınızı ekleyebilirsiniz.</span
+            >
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!--<div class="row">
+  <div class="col-lg-4 col-md-6">
+    <mat-card class="fleet_list-item">
+      <mat-card-header>
+        <mat-card-title>Hyundai Accent Blue 1.6 Dizel Otomatik</mat-card-title>
+        <mat-card-subtitle>Ekonomik</mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          mat-card-image
+          src="https://www.enterprise.com.tr/upload/vehicles/imagew/352/Hyundai%20Accent%20Blue_SOL_637238524974825240.png"
+          alt="Toyota"
+        />
+      </div>
+      <div class="properties">
+        <div class="properties-item">
+          <span class="properties-item-title">Kişi</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'user']"></fa-icon> <em>5</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Çanta</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon> <em>6</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Vites</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'sliders-h']"></fa-icon> <em>Otomatik</em>
+          </span>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Hyundai Accent Blue 1.6 Dizel Otomatik</mat-card-title>
+        <mat-card-subtitle>Ekonomik</mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          mat-card-image
+          src="https://www.enterprise.com.tr/upload/vehicles/imagew/352/Hyundai%20Accent%20Blue_SOL_637238524974825240.png"
+          alt="Toyota"
+        />
+      </div>
+      <div class="properties">
+        <div class="properties-item">
+          <span class="properties-item-title">Kişi</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'user']"></fa-icon> <em>5</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Çanta</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon> <em>6</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Vites</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'sliders-h']"></fa-icon> <em>Otomatik</em>
+          </span>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>-->
