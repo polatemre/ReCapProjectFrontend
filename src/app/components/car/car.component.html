@@ -33,6 +33,18 @@
     <div class="container-fluid">
       <div class="row">
         <div class="site__container">
+          <!--
+          <div class="col-12" *ngIf="!this.carService.cars">
+            <span>Araçlar yükleniyor...</span>
+          </div>
+          <div class="col-12" *ngIf="this.carService.cars?.length === 0">
+            <span
+              >Henüz araç eklemediniz.
+              <a class="text-primary">Buraya tıklayarak</a>
+              ilk aracınızı ekleyebilirsiniz.</span
+            >
+          </div>
+          -->
           
           <mat-tab-group>
             <mat-tab>
@@ -84,7 +96,7 @@
                         </span>
                       </div>
                     </div>
-                    <button mat-flat-button style="width: 100%" color="primary">
+                    <button mat-flat-button style="width: 100%" color="primary" routerLink="/cars/details/{{ car.carId }}">
                       DETAYLARI GÖSTER
                     </button>
                   </div>
@@ -144,7 +156,7 @@
                         </span>
                       </div>
                     </div>
-                    <button mat-flat-button style="width: 100%" color="primary">
+                    <button mat-flat-button style="width: 100%" color="primary" routerLink="/cars/details/{{ car.carId }}">
                       DETAYLARI GÖSTER
                     </button>
                   </div>
@@ -152,92 +164,9 @@
               </div>
             </mat-tab>
           </mat-tab-group>
-          <!--
-          <div class="col-12" *ngIf="!this.carService.cars">
-            <span>Araçlar yükleniyor...</span>
-          </div>
-          <div class="col-12" *ngIf="this.carService.cars?.length === 0">
-            <span
-              >Henüz araç eklemediniz.
-              <a class="text-primary">Buraya tıklayarak</a>
-              ilk aracınızı ekleyebilirsiniz.</span
-            >
-          </div>-->
+          
         </div>
       </div>
     </div>
   </div>
 </main>
-
-<!--<div class="row">
-  <div class="col-lg-4 col-md-6">
-    <mat-card class="fleet_list-item">
-      <mat-card-header>
-        <mat-card-title>Hyundai Accent Blue 1.6 Dizel Otomatik</mat-card-title>
-        <mat-card-subtitle>Ekonomik</mat-card-subtitle>
-      </mat-card-header>
-      <div class="image">
-        <img
-          mat-card-image
-          src="https://www.enterprise.com.tr/upload/vehicles/imagew/352/Hyundai%20Accent%20Blue_SOL_637238524974825240.png"
-          alt="Toyota"
-        />
-      </div>
-      <div class="properties">
-        <div class="properties-item">
-          <span class="properties-item-title">Kişi</span>
-          <span class="properties-item-icon">
-            <fa-icon [icon]="['fas', 'user']"></fa-icon> <em>5</em>
-          </span>
-        </div>
-        <div class="properties-item">
-          <span class="properties-item-title">Çanta</span>
-          <span class="properties-item-icon">
-            <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon> <em>6</em>
-          </span>
-        </div>
-        <div class="properties-item">
-          <span class="properties-item-title">Vites</span>
-          <span class="properties-item-icon">
-            <fa-icon [icon]="['fas', 'sliders-h']"></fa-icon> <em>Otomatik</em>
-          </span>
-        </div>
-      </div>
-    </mat-card>
-  </div>
-  <div class="col-lg-4 col-md-6">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>Hyundai Accent Blue 1.6 Dizel Otomatik</mat-card-title>
-        <mat-card-subtitle>Ekonomik</mat-card-subtitle>
-      </mat-card-header>
-      <div class="image">
-        <img
-          mat-card-image
-          src="https://www.enterprise.com.tr/upload/vehicles/imagew/352/Hyundai%20Accent%20Blue_SOL_637238524974825240.png"
-          alt="Toyota"
-        />
-      </div>
-      <div class="properties">
-        <div class="properties-item">
-          <span class="properties-item-title">Kişi</span>
-          <span class="properties-item-icon">
-            <fa-icon [icon]="['fas', 'user']"></fa-icon> <em>5</em>
-          </span>
-        </div>
-        <div class="properties-item">
-          <span class="properties-item-title">Çanta</span>
-          <span class="properties-item-icon">
-            <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon> <em>6</em>
-          </span>
-        </div>
-        <div class="properties-item">
-          <span class="properties-item-title">Vites</span>
-          <span class="properties-item-icon">
-            <fa-icon [icon]="['fas', 'sliders-h']"></fa-icon> <em>Otomatik</em>
-          </span>
-        </div>
-      </div>
-    </mat-card>
-  </div>
-</div>-->

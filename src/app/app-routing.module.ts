@@ -1,3 +1,4 @@
+import { CarDetailsComponent } from './components/car-details/car-details.component';
 import { CarComponent } from './components/car/car.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'cars',
     component: CarComponent
+  },
+  { 
+    path: 'cars/details/:carId', 
+    component: CarDetailsComponent 
   },
 ];
 

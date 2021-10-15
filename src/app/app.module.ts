@@ -20,6 +20,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas, faSquare, faCheckSquare, faCoffee, faShoppingBag, faSlidersH } from '@fortawesome/free-solid-svg-icons';
+import { CarDetailsComponent } from './components/car-details/car-details.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { fas, faSquare, faCheckSquare, faCoffee, faShoppingBag, faSlidersH } fro
     HomeComponent,
     AboutComponent,
     CarComponent,
+    CarDetailsComponent,
   ],
   imports: [
     BrowserModule,

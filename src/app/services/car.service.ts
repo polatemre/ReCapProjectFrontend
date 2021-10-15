@@ -1,15 +1,15 @@
+import { SingleResponseModel } from './../models/singleResponseModel';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Car } from '../models/car';
 import { CarDto } from '../models/carDto';
 import { ListResponseModel } from '../models/listResponseModel';
 
 @Injectable({
   providedIn: 'root',
 })
-
 export class CarService {
   cars!: CarDto[];
+  car!: CarDto;
   filteredCars!: CarDto[];
 
   constructor(
@@ -25,6 +25,11 @@ export class CarService {
         this.cars = response.data;
         this.filteredCars = response.data;
       });
+  }
+
+  getCarById(carId: number) {
+    let newPath = this.apiUrl + 'cars/getcardetail?carId=' + carId;
+    return this.httpClient.get<ListResponseModel<CarDto>>(newPath);
   }
 
   getCarByColor(colorId: number) {

@@ -61,7 +61,6 @@ export class CarComponent implements OnInit {
   getCategories() {
     this.categoryService.getCategories();
   }
-
   addToCart(car: CarDto) {
     if (car.carId === 1) {
       //this.toastrService.error('Bu ürün sepete eklenemez', 'Hata');

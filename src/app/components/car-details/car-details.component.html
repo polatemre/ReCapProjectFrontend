@@ -1,0 +1,132 @@
+<div *ngFor="let car of cars">
+<div class="site__breadcrumb">
+  <div class="site__container">
+    <ul>
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/cars">Araç Filomuz</a></li>
+      <li>{{ car.brandName }} {{ car.modelName }}
+        {{ car.fuelType }}
+        {{ car.gear }}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page__header noBorder">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="page__header-title mb-0">
+          {{ car.brandName }} {{ car.modelName }}
+        {{ car.fuelType }}
+        {{ car.gear }}
+        </h1>
+        <p>{{ car.brandName }} {{ car.modelName }}
+          {{ car.fuelType }}
+          {{ car.gear }}</p>
+      </div>
+      <div class="col-md-4 d-flex justify-content-end align-items-start">
+        <button
+            mat-flat-button
+            style="font-size: large; padding: 10px"
+            color="primary"
+          >
+            REZERVASYON YAPIN
+          </button>
+          <!--
+        <a
+          href="/rezervasyon/ara?VehicleGroup=65459d06-2584-b170-f809-39f4519d2fa0"
+          class="btn btn-brand"
+          ><span>REZERVASYON YAPIN</span></a>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="fleetCar-detail-cover">
+    <div class="fleetCar-detail-cover-bg">
+      <img
+        src="https://www.enterprise.com.tr/assets/images/FleetCars/detail-bg.jpg"
+        alt=""
+      />
+    </div>
+    <div class="fleetCar-detail-cover-car">
+      <img
+        src="{{ getCarImageById(car.carId) }}"
+        alt="{{ getCarImageById(car.carId) }}"
+      />
+    </div>
+  </div>
+
+  <div class="page__content mb-5">
+    <div class="container">
+      <h2
+        class="
+          page__header-title
+          half-border
+          vehicle-name-title
+          fleet-vehicle-name
+        "
+      >
+        {{ car.brandName }} {{ car.modelName }}
+        {{ car.fuelType }}
+        {{ car.gear }}
+      </h2>
+      <p>
+        {{ car.description }}
+      </p>
+      <div class="properties properties-borders">
+        <div class="properties-item">
+          <span class="properties-item-title">Kişi</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'user']"></fa-icon> <em>{{ car.seat }}</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Çanta</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon> <em>{{ car.bag }}</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Vites</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'sliders-h']"></fa-icon> <em>{{ car.gear }}</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Bloke Tutarı</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'credit-card']"></fa-icon>
+            <em>500,00 TL</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Ehliyet Yaşı</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'id-card']"></fa-icon> <em>1 ve üzeri</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Günlük Km</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'car']"></fa-icon> <em>500 km/gün</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Yaş Sınırı</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'calendar-alt']"></fa-icon>
+            <em>21 ile 24 arası</em>
+          </span>
+        </div>
+        <div class="properties-item">
+          <span class="properties-item-title">Kredi Kartı</span>
+          <span class="properties-item-icon">
+            <fa-icon [icon]="['fas', 'credit-card']"></fa-icon> <em>1 Kart</em>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,25 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-main {
-  padding: 5px;
-  .page-tittle {
-    font-size: 40px;
-    color: #333;
-  }
-  .page-decoration {
-    color: #777;
-  }
-}
-
 .mat-snack-bar-container {
   color: #fff;
   &.success {
@@ -27,5 +7,501 @@ main {
   }
   &.error {
     background-color: #dc3545;
+  }
+}
+
+.fleet_list-item {
+  width: 100%;
+  padding: 50px;
+  border-bottom: 2px solid #c3c3c3;
+}
+
+@media (min-width: 992px) {
+  .fleet_list-item-title {
+    height: 70px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .fleet_list-item-title {
+    height: 147px;
+  }
+}
+
+.fleet_list-item .title {
+  font-size: 26px;
+  text-align: center;
+  color: #3f51b5;
+  margin-bottom: 15px;
+}
+
+.fleet_list-item .title {
+  font-size: 24px !important;
+}
+
+.fleet_list-item .sub-title {
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .fleet_list-item .image {
+    height: 235px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fleet_list-item .image {
+    height: 323px;
+  }
+}
+
+.fleet_list-item .image {
+  width: 100%;
+  text-align: center;
+}
+
+.fleet_list-item .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.properties {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.fleet_list-item .properties-item {
+  width: auto;
+}
+
+.properties-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.properties-item-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.properties-item-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  em {
+    font-style: normal;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+}
+
+.properties-item-icon i {
+  font-size: 18px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.page__header-title {
+  font-size: 32px!important;
+  font-weight: 900!important;
+  color: #231f20!important;
+  line-height: 1.2!important;
+  padding: 10px 0!important;
+  margin-bottom: 20px!important;
+}
+
+.page__header p {
+  font-size: 16px;
+}
+
+.page__header.noBorder {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+mat-card-title {
+  color: #3f51b5;
+}
+
+mat-card-subtitle {
+  color: #000;
+}
+
+.site__main {
+  margin-top: 0;
+  transition: margin-top 0.45s ease-in-out;
+}
+
+.site__breadcrumb {
+  width: 100%;
+  border-bottom: 2px solid #c3c3c3;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+  }
+
+  ul > li {
+    font-size: 16px;
+    color: #231f20;
+    a {
+      color: #3f51b5;
+    }
+  }
+
+  ul > li:after {
+    content: "/";
+    margin: 0 10px;
+  }
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.page__header {
+  width: 100%;
+  border-bottom: 1px solid #c3c3c3;
+  margin-bottom: 40px;
+  padding: 40px 0 40px 0;
+}
+
+@media (max-width: 767px) {
+  .page__header {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .page__header {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.site__container {
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@media (max-width: 991px) {
+  .site__container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.properties {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.properties-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.properties-item-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+.properties-item-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.properties-item-icon i {
+  font-size: 18px;
+}
+.properties-item-icon em {
+  font-style: normal;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.properties-borders {
+  border: 1px solid #c3c3c3;
+}
+@media (max-width: 767px) {
+  .properties-borders {
+    padding: 0 0 0 40px;
+  }
+}
+.properties-borders .properties-item {
+  padding: 10px 0;
+  border-right: 1px solid #c3c3c3;
+}
+@media (max-width: 767px) {
+  .properties-borders .properties-item {
+    align-items: flex-start;
+  }
+}
+.properties-borders .properties-item:last-child {
+  border-right: none;
+}
+
+.fleet_list-item .title .similar {
+  font-size: 18px;
+}
+
+.otherFleet_components {
+  width: 100%;
+  padding: 80px 0;
+}
+.otherFleet_components-item {
+  width: 100%;
+  position: relative;
+}
+.otherFleet_components-item .title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 110px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #231f20;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.otherFleet_components-item .image {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.otherFleet_components-item .image img {
+  max-width: 100%;
+  height: auto;
+}
+.otherFleet_components-item .text_wrap {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.otherFleet_components-item .text_wrap b {
+  margin-bottom: 16px;
+  display: block;
+}
+@media screen and (max-width: 991px) {
+  .otherFleet_components {
+    overflow: hidden;
+    padding: 30px 0;
+  }
+  .otherFleet_components .swiper-container {
+    overflow: visible;
+  }
+}
+.half-border {
+  position: relative;
+}
+.half-border:after {
+  content: "";
+  width: 84px;
+  background-color: #3f51b5;
+  height: 3px;
+  display: block;
+  margin-top: 20px;
+}
+.fleetCar-detail-cover {
+  width: 100%;
+  position: relative;
+}
+.fleetCar-detail-cover-bg {
+  width: 100%;
+  height: 295px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 200px;
+}
+.fleetCar-detail-cover-bg img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.fleetCar-detail-cover-car {
+  width: 570px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: auto;
+}
+.fleetCar-detail-cover-car img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .fleetCar-detail-cover-bg {
+    height: 180px;
+    margin-bottom: 20px;
+  }
+  .fleetCar-detail-cover-car {
+    width: 370px;
+    max-width: 90%;
+  }
+}
+#fleetCarSimilar {
+  padding: 0 50px;
+}
+#fleetCarSimilar .swiper-button-next,
+#fleetCarSimilar .swiper-button-prev {
+  color: #231f20;
+}
+@media screen and (max-width: 767px) {
+  #fleetCarSimilar {
+    padding: 0 15px;
+  }
+}
+#OtherCarsSlider {
+  padding: 0 50px;
+}
+#OtherCarsSlider .swiper-button-next,
+#OtherCarsSlider .swiper-button-prev {
+  color: #231f20;
+}
+#detailImagesSlider {
+  margin-top: 30px;
+  padding: 30px 0 60px;
+}
+#detailImagesSlider .swiper-slide {
+  width: 450px;
+}
+#detailImagesSlider .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+#detailImagesSlider .swiper-pagination {
+  bottom: -16px;
+}
+.similarFleet .swiper-slide img {
+  height: 100%;
+}
+.img-blur a {
+  display: inline-block;
+}
+.img-blur img {
+  filter: blur(3px);
+  height: 336px !important;
+  object-fit: cover;
+}
+.img-blur a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, -50%);
+  background-image: url("https://www.enterprise.com.tr/assets/images/icons/play-button.png");
+  background-size: cover;
+  z-index: 2;
+}
+@media screen and (min-width: 992px) {
+  .w-lg-50 {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #OtherCarsSlider .swiper-button-next,
+  #OtherCarsSlider .swiper-button-prev {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  #OtherCarsSlider .swiper-button-next,
+  #OtherCarsSlider .swiper-button-prev {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #OtherCarsSlider {
+    padding: 0 15px;
+  }
+  #OtherCarsSlider .otherFleet_components-item {
+    padding: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .fleet_list-item-title {
+    height: 70px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .fleet_list-item-title {
+    height: 147px;
+  }
+}
+@media (max-width: 767px) {
+  .vehicle-name-title.fleet-vehicle-name {
+    padding-top: 80px !important;
+  }
+  .similarFleet .fleet_list-item {
+    padding: 20px;
+  }
+  #detailImagesSlider .swiper-slide {
+    width: 100%;
+  }
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.caravan-table-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.caravan-table-container .table + .table {
+  margin-left: 30px;
+}
+@media (max-width: 767px) {
+  .caravan-table-container {
+    flex-direction: column;
+  }
+  .caravan-table-container .table + .table {
+    margin-left: 0;
+    margin-top: 30px;
   }
 }
