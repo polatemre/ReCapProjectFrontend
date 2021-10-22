@@ -1,4 +1,4 @@
-import { CarImage } from './../../models/carImage';
+import { CarImage } from './../../../models/carImage';
 import { Component, Inject, OnInit } from '@angular/core';
 import { CarService } from 'src/app/services/car.service';
 import { ActivatedRoute } from '@angular/router';

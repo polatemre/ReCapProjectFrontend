@@ -1,3 +1,4 @@
+import { AdminModule } from './components/admin/admin.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +21,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas, faSquare, faCheckSquare, faCoffee, faShoppingBag, faSlidersH } from '@fortawesome/free-solid-svg-icons';
-import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { CarDetailsComponent } from './components/car/car-details/car-details.component';
+import { PublicLayoutComponent } from './components/public-layout/public-layout.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { CarDetailsComponent } from './components/car-details/car-details.compon
     AboutComponent,
     CarComponent,
     CarDetailsComponent,
+    PublicLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { CarDetailsComponent } from './components/car-details/car-details.compon
     MatButtonModule,
     MatTabsModule,
     FormsModule,
-    FontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [
     {
